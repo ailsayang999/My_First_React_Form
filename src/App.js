@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 //Styled Component
 
@@ -62,18 +63,31 @@ const StyledP = styled.p`
 `;
 
 function App() {
+   const [name, setName] = useState("");
+   const [email, setEmail] = useState("");
+
   return (
     <Container>
       <StyledH1>My First React Form</StyledH1>
 
       <StyledForm>
         <StyledLabel>Name:</StyledLabel>
-        <StyledInput className="name" type="text" placeholder="name" />
+        <StyledInput
+          className="name"
+          type="text"
+          placeholder="name"
+          value={name}
+        />
 
         <br />
 
         <StyledLabel>Email:</StyledLabel>
-        <StyledInput className="email" type="email" placeholder="email" />
+        <StyledInput
+          className="email"
+          type="email"
+          placeholder="email"
+          value={email}
+        />
 
         <br />
 
