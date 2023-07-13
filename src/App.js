@@ -66,8 +66,13 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (name.trim() === "" || email.trim() === "") {
+      setError("Please fill in your name and email!!!!");
+      return;
+    }
     console.log("New name is", name);
     console.log("New email is", email);
     setSubmitted(true);
@@ -104,6 +109,7 @@ function App() {
           Submit
         </StyledButton>
       </StyledForm>
+      {error && <p>{error}</p>}
       {submitted && (
         <div>
           <StyledP>Name: {name}</StyledP>
