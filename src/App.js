@@ -77,6 +77,7 @@ function App() {
           type="text"
           placeholder="name"
           value={name}
+          onChange={(e) => setName(e.target.value)}
         />
 
         <br />
@@ -87,6 +88,7 @@ function App() {
           type="email"
           placeholder="email"
           value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <br />
