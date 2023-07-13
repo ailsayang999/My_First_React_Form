@@ -2,7 +2,7 @@
 
 這是一個使用React建立的簡單表單範例。該表單具有姓名和電子郵件字段，並在提交後顯示所輸入的姓名和電子郵件。
 
-![Project Image](https://github.com/ailsayang999/My_First_React_Form/public/3-1_A3_AilsaYang.png)
+![Project Image](https://github.com/ailsayang999/My_First_React_Form/blob/main/public/3-1_A3_AilsaYang.png)
 
 ## 功能特點
 
