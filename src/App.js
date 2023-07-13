@@ -65,10 +65,12 @@ const StyledP = styled.p`
 function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("New name is", name);
     console.log("New email is", email);
+    setSubmitted(true);
   };
 
   return (
@@ -102,6 +104,12 @@ function App() {
           Submit
         </StyledButton>
       </StyledForm>
+      {submitted && (
+        <div>
+          <StyledP>Name: {name}</StyledP>
+          <StyledP>Email: {email}</StyledP>
+        </div>
+      )}
     </Container>
   );
 }
