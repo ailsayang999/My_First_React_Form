@@ -63,14 +63,19 @@ const StyledP = styled.p`
 `;
 
 function App() {
-   const [name, setName] = useState("");
-   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("New name is", name);
+    console.log("New email is", email);
+  };
 
   return (
     <Container>
       <StyledH1>My First React Form</StyledH1>
 
-      <StyledForm>
+      <StyledForm onSubmit={handleSubmit}>
         <StyledLabel>Name:</StyledLabel>
         <StyledInput
           className="name"
